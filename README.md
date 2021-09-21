@@ -4,6 +4,7 @@
 
 Mock e-commerce website made with `React`, `Firebase` and `Stripe`
 
+The site is deployed on Netlify at: `https://awesome-hermann-75bd48.netlify.app/`
 
 <hr>
 
