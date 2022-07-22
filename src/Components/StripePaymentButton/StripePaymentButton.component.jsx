@@ -1,9 +1,6 @@
 import StripeCheckout from "react-stripe-checkout";
-import { connect, useDispatch } from "react-redux";
-import {
-  clearItemFromCart,
-  toggleIsCartHidden,
-} from "../../Redux/CartState/Cart.action";
+import { useDispatch } from "react-redux";
+import { clearItemFromCart } from "../../Redux/CartState/Cart.action";
 
 const StripePaymentButton = ({ totalPrice, cartItems }) => {
   const priceInCents = totalPrice * 100;
@@ -19,7 +16,7 @@ const StripePaymentButton = ({ totalPrice, cartItems }) => {
 
   const clearAllItemsFromCart = () => {
     cartItems.map((currItem) => {
-      dispatch(clearItemFromCart(currItem));
+      return dispatch(clearItemFromCart(currItem));
     });
   };
 
